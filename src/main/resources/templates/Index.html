@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario de Registro de Parqueadero</title>
+</head>
+<body>
+<h2>Registro de Parqueadero</h2>
+<form action="procesar_registro.java" method="POST">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required><br><br>
+
+    <label for="placa">Placa del vehiculo:</label>
+    <input type="text" id="placa" name="placa" required><br><br>
+
+    <label for="tipo">Tipo de vehiculo:</label>
+    <select id="tipo" name="tipo" required>
+        <option value="">Seleccionar</option>
+        <option value="Automovil">Automovil</option>
+        <option value="Motocicleta">Motocicleta</option>
+        <option value="Tractor">Tractor</option>
+        <option value="Bicicleta">Bicicleta</option>
+        <option value="Camion">Camion</option>
+    </select><br><br>
+
+    <label for="hora_ingreso">Hora de ingreso:</label>
+    <input type="time" id="hora_ingreso" name="hora_ingreso" required><br><br>
+
+    <label for="hora_salida">Hora de salida:</label>
+    <input type="time" id="hora_salida" name="hora_salida" required><br><br>
+
+    <label for="tipo_pago">Tipo de pago:</label>
+    <select id="tipo_pago" name="tipo_pago" required onchange="mostrarOpcionesPago()">
+        <option value="">Seleccionar</option>
+        <option value="Bancolombia">Bancolombia</option>
+        <option value="Nequi">Nequi</option>
+        <option value="Daviplata">Daviplata</option>
+        <option value="Efectivo">Efectivo</option>
+    </select><br><br>
+
+    <div id="opciones_pago" style="display: none;">
+        <label for="opciones_bancolombia">Opciones Bancolombia:</label>
+        <select id="opciones_bancolombia" name="opciones_bancolombia">
+            <option value="">Seleccionar</option>
+            <option value="Ahorro a la mano">Ahorro a la mano</option>
+            <option value="Cuenta de ahorros">Cuenta de ahorros</option>
+            <option value="Cuenta corriente">Cuenta corriente</option>
+        </select><br><br>
+
+        <label for="opciones_daviplata">Opciones Daviplata:</label>
+        <select id="opciones_daviplata" name="opciones_daviplata">
+            <option value="">Seleccionar</option>
+            <option value="Opción 1">Opción 1</option>
+            <option value="Opción 2">Opción 2</option>
+            <option value="Opción 3">Opción 3</option>
+        </select><br><br>
+    </div>
+
+    <input type="submit" value="Registrar">
+</form>
+
+<script>
+        function mostrarOpcionesPago() {
+            var tipoPago = document.getElementById("tipo_pago").value;
+            var opcionesPagoDiv = document.getElementById("opciones_pago");
+
+           if (tipoPago === "Bancolombia") {
+            opcionesPagoDiv.style.display = "block";
+            document.getElementById("opciones_bancolombia").style.display = "block";
+            document.getElementById("opciones_daviplata").style.display = "none";
+        } else if (tipoPago === "Nequi") {
+            opcionesPagoDiv.style.display = "block";
+            document.getElementById("opciones_bancolombia").style.display = "none";
+            document.getElementById("opciones_daviplata").style.display = "none";
+        } else if (tipoPago === "Daviplata") {
+            opcionesPagoDiv.style.display = "block";
+            document.getElementById("opciones_bancolombia").style.display = "none";
+            document.getElementById("opciones_daviplata").style.display = "block";
+        } else {
+            opcionesPagoDiv.style.display = "none";
+            document.getElementById("opciones_bancolombia").style.display = "none";
+            document.getElementById("opciones_daviplata").style.display = "none";
+        }
+    }
+</script>
+</body>
+</html>
