@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Parqueadero</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<body>
+<h1>Registro de Vehículo</h1>
+<form method="post" action="procesar-formulario.java">
+    <label for="placa">Placa:</label>
+    <input type="text" id="placa" name="placa" required><br><br>
+
+    <label for="marca">Marca:</label>
+    <input type="text" id="marca" name="marca" required><br><br>
+
+    <label for="color">Color:</label>
+    <input type="text" id="color" name="color" required><br><br>
+
+    <label for="tipo">Tipo:</label>
+    <select id="tipo" name="tipo">
+        <option value="Automóvil">Automóvil</option>
+        <option value="Motocicleta">Motocicleta</option>
+        <option value="Camioneta">Camioneta</option>
+    </select><br><br>
+
+    <label for="horaIngreso">Hora de Ingreso:</label>
+    <input type="time" id="horaIngreso" name="horaIngreso" required><br><br>
+
+    <input type="submit" value="Registrar Vehículo">
+</form>
+<div class="container mt-4">
+    <a th:href="@{/new}" class="btn btn-primary">Nuevo</a>
+    <table class="table" border="=3">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>NOMBRE</th>
+            <th>TELEFONO</th>
+            <th>ACCIONES</th>
+
+        </tr>
+
+        </thead>
+        <tbody>
+        <tr th:each="persona:${personas}">
+            <td th:text="${persona.id}"></td>
+            <td th:text="${persona.name}"></td>
+            <td th:text="${persona.telefono}"></td>
+            <td>
+                <a th:href="@{/editar/}+${persona.id}" class="btn btn-warning">Editar</a>
+                <a th:href="@{/eliminar/}+${persona.id}"  class="btn btn-danger">Eliminar</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<table>
+</table>
+</body>
+</html>
