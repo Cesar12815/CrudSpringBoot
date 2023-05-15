@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Seleccionar método de pago</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('https://static9.depositphotos.com/1003620/1140/i/950/depositphotos_11401564-stock-photo-parking-garage-underground.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        h1 {
+            text-align: center;
+            font-size: 3rem;
+            color: #000;
+            text-shadow: 0 0 10px #fff;
+            margin-bottom: 2rem;
+        }
+        form {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+        }
+        button {
+            background-color: transparent;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-shadow: 0 0 10px #fff;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+<h1>Seleccionar método de pago</h1>
+<form>
+    <br><br>
+    <button type="submit" name="boton" value="nequi" formaction="http://localhost:63342/CrudSpringBoot/templates/Pago%20con%20nequi.html?_ijt=c45qo5sm5p2t72lo36ljj9rc53&_ij_reload=RELOAD_ON_SAVE">Nequi</button>
+    <button type="submit" name="boton" value="daviplata" formaction="http://localhost:63342/CrudSpringBoot/templates/DaviPlata.html?_ijt=8vhp63rp60pa05722dtvrme6m3&_ij_reload=RELOAD_ON_SAVE">DaviPlata</button>
+    <button type="submit" name="boton" value="bancolombia" formaction="http://localhost:63342/CrudSpringBoot/templates/Bancolombia.html?_ijt=k9n4qoj210df4j4a5f0qlop0se&_ij_reload=RELOAD_ON_SAVE">Bancolombia</button>
+</form>
+</body>
+</html>
+

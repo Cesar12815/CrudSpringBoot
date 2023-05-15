@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pagar Parqueadero en Efectivo</title>
+    <style>
+        body {
+            background-color: black;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        body {
+            background-image: url("https://media.istockphoto.com/id/547511060/es/foto/estacionamiento-subterr%C3%A1neo-garaje.jpg?s=612x612&w=0&k=20&c=r4ngzGGeNXBazHeRe5P5D2ESobvfo8NC_NC2pv23R0A=");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        h1 {
+            color: black;
+            font-size: 2em;
+            margin-top: 50px;
+        }
+        p {
+            color: black;
+            font-size: 1.3em;
+            margin-top: 20px;
+        }
+        form {
+            margin-top: 50px;
+            display: inline-block;
+            text-align: left;
+            padding: 20px;
+            border: 1px solid #CCCCCC;
+            border-radius: 5px;
+            background-color: #FFFFFF;
+        }
+        label {
+            display: block;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: black;
+        }
+        input[type="text"] {
+            font-size: 1.2em;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #CCCCCC;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+        input[type="submit"] {
+            font-size: 1.2em;
+            padding: 10px;
+            background-color: black;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #005CB2;
+        }
+    </style>
+</head>
+<body>
+<h1>Pagar Parqueadero en Efectivo</h1>
+<p>Por favor ingrese los siguientes datos:</p>
+<form>
+    <label for="placa">Numero de placa del vehiculo:</label>
+    <input type="text" id="placa" name="placa" required>
+    <label for="hora_ingreso">Hora de ingreso del vehiculo:</label>
+    <input type="text" id="hora_ingreso" name="hora_ingreso" required>
+    <label for="hora_salida">Hora de salida del vehiculo:</label>
+    <input type="text" id="hora_salida" name="hora_salida" required>
+    <label for="total">Total a pagar:</label>
+    <input type="text" id="total" name="total" required>
+    <input type="submit" value="Pagar">
+</form>
+</body>
+</html>

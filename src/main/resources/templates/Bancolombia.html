@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Registro de Pago De Bancolombia</title>
+    <style>
+        body {
+            background-color: white;
+        }
+        #logo {
+            width: 250px; /* ajusta el tamaño del logo según tus necesidades */
+            height: auto; /* esto permite que la altura se ajuste proporcionalmente al ancho */
+        }
+    </style>
+</head>
+<header>
+    <img id="logo" src="data:image/png;base64,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" alt="Banco Colombia">
+</header>
+    </style>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h2 class="mb-4">Registro de Pago De Bancolombia</h2>
+            <form id="pagoForm">
+                <div class="form-group">
+                    <label for="tipoCuenta">Tipo de Cuenta</label>
+                    <select class="form-control" id="tipoCuenta" name="tipoCuenta">
+                        <option value="ahorros">Cuenta de Ahorros</option>
+                        <option value="ahorroMano">Ahorro a la Mano</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="valorPago">Valor del Pago</label>
+                    <input type="number" class="form-control" id="valorPago" name="valorPago" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Pagar</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="reciboModal" tabindex="-1" role="dialog" aria-labelledby="reciboModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="reciboModalLabel">Recibo de Pago</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Se ha realizado el siguiente pago:</p>
+                <ul>
+                    <li>Tipo de cuenta: <span id="reciboTipoCuenta"></span></li>
+                    <li>Valor del pago: $<span id="reciboValorPago"></span></li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script><script>
+    const pagoForm = document.querySelector('#pagoForm');
+    const reciboTipoCuenta = document.querySelector('#reciboTipoCuenta');
+    const reciboValorPago = document.querySelector('#reciboValorPago');
+
+    pagoForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const formData = new FormData(pagoForm);
+        const tipoCuenta = formData.get('tipoCuenta');
+        const valorPago = formData.get('valorPago');
+        try {
+            const response = await axios.post('/realizar-pago', { tipoCuenta, valorPago });
+            reciboTipoCuenta.textContent = response.data.tipoCuenta;
+            reciboValorPago.textContent = response.data.valorPago;
+            $('#reciboModal').modal('show');
+        } catch (error) {
+            console.error(error);
+            Swal.fire({
+                icon: 'error',
+                title: 'Error al realizar el pago',
+                text: 'Ha ocurrido un error al intentar realizar el pago. Por favor, intenta de nuevo más tarde.'
+            });
+        }
+    });
+</script>
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
+

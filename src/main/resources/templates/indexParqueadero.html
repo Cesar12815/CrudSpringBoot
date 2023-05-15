@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Parqueadero</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="https://example.com/logo.png" alt="Parqueadero logo" width="30" height="30" class="d-inline-block align-text-top">
+            Parqueadero
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="ingreso_vehiculo.php">Ingresar vehículo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="listar_vehiculos.php">Listar vehículos</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container mt-4">
+    <h1 class="text-center">Bienvenido al Parqueadero</h1>
+    <div class="row justify-content-center align-items-center">
+        <div class="col-lg-6">
+            <img src="https://example.com/parqueadero.jpg" alt="Parqueadero" class="img-fluid">
+        </div>
+        <div class="col-lg-6">
+            <p class="lead">Ofrecemos servicios de estacionamiento de vehículos y motocicletas en nuestras instalaciones seguras y vigiladas las 24 horas.</p>
+            <p>Además, contamos con personal calificado y capacitado para brindarle la mejor atención y cuidado a su vehículo.</p>
+        </div>
+    </div>
+    <?php if(isset($_GET['ingreso']) && $_GET['ingreso'] == "success"): ?>
+    <div class="alert alert-success mt-4" role="alert">
+        El vehículo ha sido ingresado correctamente.
+    </div>
+    <?php endif; ?>
+    <form action="ingreso_vehiculo.php" method="POST" class="mt-4">
+        <div class="mb-3">
+            <label for="input-placa" class="form-label">Placa</label>
+            <input type="text" class="form-control" id="input-placa" name="placa" placeholder="Ingrese la placa del vehículo">
+        </div>
+        <div class="mb-3">
+            <label for="input-tipo" class="form-label">Tipo</label>
+            <select class="form-select" id="input-tipo" name="tipo">
+                <option value="" selected>Seleccione el tipo de vehículo</option>
+                <option value="1">Automóvil</option>
+                <option value="2">Motocicleta</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Ingresar</button>
+    </form>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-dKECQbpylJymzb07xKdHxIFe9qg72pb+a5ejnJUgrLk//zVYU6CB/yU6eQpx6Eaj" crossorigin="anonymous"></script>
+</body>
+</html>

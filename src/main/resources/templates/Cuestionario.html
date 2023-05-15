@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cuestionario</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('https://static9.depositphotos.com/1003620/1140/i/950/depositphotos_11401564-stock-photo-parking-garage-underground.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        h1 {
+            text-align: center;
+            font-size: 3rem;
+            color: #000;
+            text-shadow: 0 0 10px #fff;
+            margin-bottom: 2rem;
+        }
+        form {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+        }
+        button {
+            background-color: transparent;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-shadow: 0 0 10px #fff;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+<h1>Ingresar tipo de vehículo</h1>
+<form>
+    <br><br>
+    <button type="button" name="boton" value="moto" onclick="location.href='http://localhost:63342/CrudSpringBoot/templates/Moto.html?_ijt=5ibqeqpde1ae5sl2oqp7i093l0&_ij_reload=RELOAD_ON_SAVE';">Moto</button>
+    <button type="button" name="boton" value="carro" onclick="location.href='http://localhost:63342/CrudSpringBoot/templates/Carro.html?_ijt=5ibqeqpde1ae5sl2oqp7i093l0&_ij_reload=RELOAD_ON_SAVE';">Carro</button>
+</form>
+</body>
+</html>
+

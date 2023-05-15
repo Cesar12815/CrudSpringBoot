@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recibo de Carro - Empresa MC</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<header class="encabezado">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIEWVCOAYGNVVNoPWRIWOOsvsvdofklqqzQQ&usqp=CAU" alt="Logo de la empresa" class="logo">
+  <h1 class="titulo-principal">Recibo de Moto</h1>
+  <div class="informacion-empresa">
+    <div class="nombre-empresa">Empresa MC</div>
+    <div class="direccion-empresa">Calle 123 #45-67, Ciudad</div>
+  </div>
+</header>
+<main class="contenido">
+  <section class="informacion-recibo">
+    <table>
+      <tr>
+        <th>Número de Placa:</th>
+        <td>ABC123</td>
+      </tr>
+      <tr>
+        <th>Hora de Entrada:</th>
+        <td>08:30</td>
+      </tr>
+      <tr>
+        <th>Hora de Salida:</th>
+        <td>11:45</td>
+      </tr>
+    </table>
+    <div class="total">
+      <p><strong>Total:</strong> $25.00</p>
+    </div>
+  </section>
+  <section class="qr">
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=ABC123" alt="Código QR">
+  </section>
+</main>
+<footer class="pie-pagina">
+  <div class="informacion-contacto">
+    <div class="telefono">Teléfono: 123-4567</div>
+    <div class="email">Email: info@empresa.com</div>
+  </div>
+  <div class="derechos">© 2023 Empresa MC. Todos los derechos reservados.</div>
+</footer>
+</body>
+</html>

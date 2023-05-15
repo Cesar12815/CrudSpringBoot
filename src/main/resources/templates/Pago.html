@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pago Del Parqueaderp</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('https://static9.depositphotos.com/1003620/1140/i/950/depositphotos_11401564-stock-photo-parking-garage-underground.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        h1 {
+            text-align: center;
+            font-size: 3rem;
+            color: #000;
+            text-shadow: 0 0 10px #fff;
+            margin-bottom: 2rem;
+        }
+        form {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+        }
+        button {
+            background-color: transparent;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-shadow: 0 0 10px #fff;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+<h1>Ingresar tipo de Pago</h1>
+<form action="http://localhost:63342/CrudSpringBoot/templates/Pago%20PSE.html?_ijt=78gk6l8g1ktl9lpp7a0r8irfjj&_ij_reload=RELOAD_ON_SAVE" method="POST">
+    <br><br>
+    <button type="submit" name="boton" value="Efectivo" formaction="http://localhost:63342/CrudSpringBoot/templates/Efectivo.html?_ijt=78gk6l8g1ktl9lpp7a0r8irfjj&_ij_reload=RELOAD_ON_SAVE">Efectivo</button>
+    <button type="submit" name="boton" value="PSE">Pago PSE</button>
+</form>
+</body>
+</html>

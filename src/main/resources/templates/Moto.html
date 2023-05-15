@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parqueadero de motos - MiParking</title>
+    <style>
+        body {
+            background: #000;
+            background-image: url('https://static9.depositphotos.com/1003620/1140/i/950/depositphotos_11401564-stock-photo-parking-garage-underground.jpg');
+            background-size: cover;
+            background-blend-mode: screen;
+        }
+        header {
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            text-shadow: 2px 2px #000;
+        }
+        form {
+            background: rgba(255, 255, 255, 0.8);
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input {
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+            box-shadow: 2px 2px #ccc;
+            width: 100%;
+            font-size: 16px;
+        }
+        button[type="submit"], button[type="button"] {
+            background: #1e90ff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        button[type="submit"]:hover, button[type="button"]:hover {
+            background: #fff;
+            color: #1e90ff;
+            box-shadow: 2px 2px #ccc;
+        }
+        footer {
+            text-align: center;
+            color: #fff;
+            padding: 10px;
+            text-shadow: 2px 2px #000;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Parqueadero de motos - MiParking</h1>
+</header>
+<main>
+    <form action="#" method="POST">
+        <fieldset>
+            <legend>Registro de moto</legend>
+
+            <div class="form-group">
+                <label for="placa">Placa:</label>
+                <input type="text" id="placa" name="placa" required>
+            </div>
+
+            <div class="form-group">
+                <label for="modelo">Modelo:</label>
+                <input type="text" id="modelo" name="modelo" required>
+            </div>
+
+            <div class="form-group">
+                <label for="hora_entrada">Hora de entrada:</label>
+                <input type="time" id="hora_entrada" name="hora_entrada" required>
+            </div>
+
+            <div class="form-group">
+                <label for="hora_salida">Hora de salida:</label>
+                <input type="time" id="hora_salida" name="hora_salida">
+            </div>
+            <button type="submit">Registrar moto</button>
+            <button type="button" onclick="window.open('http://localhost:63342/CrudSpringBoot/templates/Recibo%20de%20Moto.html?_ijt=kqfleblvi62bcrp6kn1pks38bs&_ij_reload=RELOAD_ON_SAVE', '_blank')" style="background: #1e90ff; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; transition: all 0.3s ease;">Imprimir Recibo</button>
+        </fieldset>
+    </form>
+</main>
+<footer>
+    <p>Desarrollado por MiParking &copy; 2023</p>
+</footer>
+</body>
+</html>
+
